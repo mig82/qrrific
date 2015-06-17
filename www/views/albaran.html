@@ -1,0 +1,45 @@
+<div ng-controller="AlbCtrl">
+	<div class="row search-row">
+		<!--input class="col-xs-10" type="text" bs-typeahead ng-model="selectedProduct" bs-options="product.desc as product.desc for product in inventory"-->
+		<input class="col-xs-12" type="text" ng-model="q" placeholder="Search" >
+		<button type="button" class="close pull-right clear-search-btn" aria-label="Close" ng-click="clearSearch()"><span aria-hidden="true">&times;</span></button>
+	</div>
+
+	<div class="row">
+		<div class="animate-if" ng-if="q">
+			<ul class="example-animate-container">
+				<li class="animate-repeat typeahead-result" ng-repeat="product in inventory | filter:q as results track by $index" ng-click="addProduct(product)">{{product.ds}}</li>
+				<li class="animate-repeat typeahead-result bg-warning" ng-if="results.length == 0">
+					<strong>Oops! no match</strong>
+				</li>
+			</ul>
+		</div>
+			
+	</div>
+
+	<div class="row header-row">
+		<div class="col-xs-4 col-sm-7">
+			Desc.
+		</div>
+		<div class="col-xs-3 col-sm-2">
+			Price
+		</div>
+		<div class="col-xs-2 col-sm-1">
+			Qty.
+		</div>
+		<div class="col-xs-3 col-sm-2">
+			Total
+		</div>
+	</div><!--head row-->
+
+	<div class="row" data-ng-repeat="item in items">
+		<span  class="col-xs-4 col-sm-7">{{item.ds}}</span>
+		<span  class="col-xs-3 col-sm-2 text-right">{{item.pr | currency:"€"}}</span>
+		<input class="col-xs-2 col-sm-1" type="number" data-ng-model="item.qt" />
+		<span  class="col-xs-3 col-sm-2 text-right">{{item.to | currency:"€"}}</span>
+	</div><!--row-->
+
+	<div class="row">
+		<button class="btn-block" ng-click="getQR()">Get QR</button>
+	</div>
+</div>

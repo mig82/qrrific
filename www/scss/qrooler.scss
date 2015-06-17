@@ -1,0 +1,86 @@
+body{
+	padding-top: 0px;
+}
+
+img.main-logo{
+	max-height: 1em;
+}
+
+input{
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 2px solid #34be69;
+}
+
+.search-row{
+	position: relative;
+	margin-bottom: 1em;
+
+	button.clear-search-btn{
+		position: absolute;
+		right: 0.5em;
+	}
+}
+
+.header-row{
+	font-weight: bold;
+	color: #615f8b;
+	margin-bottom: 0.3em;
+}
+
+.typeahead-result{
+	font-size: 0.9em;
+	line-height: 2em;
+	border-top: 1px solid #DADADA;
+	border-left: 1px solid #DADADA;
+	border-right: 1px solid #DADADA;
+	padding: 0em 1em;
+	cursor: pointer;
+}
+
+.typeahead-result:last-child{
+	border-bottom: 1px solid #DADADA;
+}
+
+.example-animate-container {
+	background: #FFF none repeat scroll 0% 0%;
+	border: 1px solid #E9E9E9;
+	list-style: outside none none;
+	margin: 0px;
+	padding: 0px;
+	border-radius: 0px;
+	position: absolute;
+	z-index: 100;
+	min-width: 40em;
+}
+
+.animate-repeat {
+  /*line-height:40px;*/
+  list-style:none;
+  box-sizing:border-box;
+}
+
+
+
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+  opacity:0;
+  max-height:0;
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+  opacity:1;
+  max-height:40px;
+}
+
