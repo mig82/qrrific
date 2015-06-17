@@ -1,0 +1,30 @@
+{
+  "name": "qrrific",
+  "version": "0.0.1",
+  "description": "Translates receipt notes into QR and back.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~4.12.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mig82/qrrific.git"
+  },
+  "keywords": [
+    "qr",
+    "albaran",
+    "receipt",
+    "note",
+    "logistics"
+  ],
+  "author": "Miguelangel Fernandez",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/mig82/qrrific/issues"
+  }
+}
